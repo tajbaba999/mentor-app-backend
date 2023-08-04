@@ -1,0 +1,68 @@
+GET http://localhost:3000/students
+
+###Create a post request
+POST http://localhost:3000/students
+Content-Type: application/json
+
+{
+  "rollno" : "22B81A05X2",
+  "name" : "Ramu",
+  "fathername" : "Raju",
+  "mothername" : "geeta",
+  "aadharno" : 67040597278,
+  "dob": "11-04-2003",
+  "gender" : "MALE",
+  "medium" : "ENGLISH",
+  "caste" : "BC-E",
+  "religion" : "Hindu",
+  "stdAdim": "MANAGEMENT",
+  "pressadd": "Hyderabad",
+  "permadd": "Hyderabad",
+  "sscmarks": 9.2,
+  "intermarks": 91.4,
+  "fatherno": 9542534510,
+  "motherno": 9381143742,
+  "stdno": 9381143742,
+  "rank": 
+}
+
+
+### GET a student by id 
+GET http://localhost:3000/students/64c952fbe1d2f56b64786830
+
+### Update a student by id
+PATCH  http://localhost:3000/students/64c950ed83ca5e0372bc23c6
+Content-Type: application/json
+
+{
+    "sscmarks" : 34
+}
+
+### Delete a student by id
+DELETE  http://localhost:3000/students/64c9503d7fd351869157324
+
+###Home route to check middle ware
+GET http://localhost:3000/abc
+
+###
+GET http://localhost:3000/test?name=iMac&price=2399
+
+
+###
+GET http://localhost:3000/test/35234234234
+
+
+### 
+POST http://localhost:3000/test/35234234234
+Content-Type: application/json
+
+{
+    "name" : "I mac book pro",
+    "price": 3454
+}
+
+### 
+POST http://localhost:3000/test/35234234234
+Content-Type: application/x-www-form-urlencoded
+
+name=Imac&price=95000
