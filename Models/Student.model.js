@@ -17,30 +17,15 @@ const studentSchema = new mongoose.Schema({
     type: String,
   },
   aadharno: {
-    type: Number,
+    type: String,
   },
   dob: {
-    type: Date,
+    type: String,
   },
   gender: {
     type: String,
   },
   medium: {
-    type: String,
-  },
-  caste: {
-    type: String,
-  },
-  religion: {
-    type: String,
-  },
-  stdAdim: {
-    type: String,
-  },
-  pressadd: {
-    type: String,
-  },
-  permadd: {
     type: String,
   },
   sscmarks: {
@@ -58,9 +43,34 @@ const studentSchema = new mongoose.Schema({
   stdno: {
     type: Number,
   },
+  caste: {
+    type: String,
+  },
+  religion: {
+    type: String,
+  },
   rank: {
     type: Number,
   },
+  stdAdim: {
+    type: String,
+  },
+  pressadd: {
+    type: String,
+  },
+  permadd: {
+    type: String,
+  },
+  stdmail :{
+    type : String
+  },
+  fathermail : {
+    type: String
+  },
+  mothermail : {
+    type : String
+  }
+
 });
 
 const Student = mongoose.model("Student", studentSchema);
