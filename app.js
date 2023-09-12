@@ -16,31 +16,31 @@ app.use(cors());
 //   console.log(error.message)
 // }
 
-// const dbOptions = {
-//   dbName: process.env.DATABASE_NAME,
-//   user: process.env.USERNAME,
-//   pass: process.env.PASSWORD,
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// };
+const dbOptions = {
+  dbName: process.env.DATABASE_NAME,
+  user: process.env.USERNAME,
+  pass: process.env.PASSWORD,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
 
-// mongoose.connect('mongodb+srv://students.wprxnuy.mongodb.net/', dbOptions)
-//   .then(() => console.log("Mongodb connected...."))
-//   .catch((err) => console.error("Error connecting to MongoDB:", err));
+mongoose.connect('mongodb+srv://students.wprxnuy.mongodb.net/', dbOptions)
+  .then(() => console.log("Mongodb connected...."))
+  .catch((err) => console.error("Error connecting to MongoDB:", err));
 
 
-mongoose
-  .connect(process.env.MONGODB_URL, {
-    dbName: process.env.DATABASE_NAME,
-    user: process.env.USERNAME,
-    pass: process.env.PASSWORD,
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+// mongoose
+//   .connect(process.env.MONGODB_URL, {
+//     dbName: process.env.DATABASE_NAME,
+//     user: process.env.USERNAME,
+//     pass: process.env.PASSWORD,
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
 
-  .then(() => {
-    console.log("Mongodb connected....   ");
-  });
+//   .then(() => {
+//     console.log("Mongodb connected....   ");
+//   });
 
 app.use("/students", StudentRoute);
 app.use("/mentors", MentorRoute);
