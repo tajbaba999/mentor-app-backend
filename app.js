@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const port = process.env.PORT || 3000;
 const StudentRoute = require("./Routes/Student.route");
 const MentorRoute = require("./Routes/Mentor.route.js");
+const AdminRoute = require("./Routes/Admin.route");
 
 app.use(express.json());
 app.use(cors());
@@ -24,7 +25,7 @@ const dbOptions = {
   useUnifiedTopology: true,
 };
 
-mongoose.connect('mongodb+srv://students.wprxnuy.mongodb.net/', dbOptions)
+mongoose.connect('mongodb+srv://tajbaba2003:GK8lixVdzOPn2wiv@students.wprxnuy.mongodb.net/stddata')
   .then(() => console.log("Mongodb connected...."))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
 
@@ -44,6 +45,7 @@ mongoose.connect('mongodb+srv://students.wprxnuy.mongodb.net/', dbOptions)
 
 app.use("/students", StudentRoute);
 app.use("/mentors", MentorRoute);
+app.use("/admin",AdminRoute)
 // app.get("/",(req,res)=>{
 //   return res.send("hello world")
 // })
