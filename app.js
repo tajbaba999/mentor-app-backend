@@ -25,10 +25,6 @@ const dbOptions = {
   useUnifiedTopology: true,
 };
 
-mongoose.connect('mongodb+srv://tajbaba2003:GK8lixVdzOPn2wiv@students.wprxnuy.mongodb.net/stddata')
-  .then(() => console.log("Mongodb connected...."))
-  .catch((err) => console.error("Error connecting to MongoDB:", err));
-
 
 // mongoose
 //   .connect(process.env.MONGODB_URL, {
